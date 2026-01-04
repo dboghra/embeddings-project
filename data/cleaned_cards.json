@@ -1,0 +1,1294 @@
+[
+  {
+    "id": "6918f96a286876b997c8719a",
+    "name": "Optimize Pipeline Runtime",
+    "desc": "- Pipeline runtime up from 45 to 130 minutes | - Suspected issue: inefficient Spark join | Steps: | - Analyze stage breakdown | - Recommend fixes",
+    "labels": [
+      {
+        "color": "blue_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c03e4c058d934f29a27b",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c03e4c058d934f29a27b",
+        "uses": 5,
+        "name": "Data Engineering"
+      },
+      {
+        "color": "purple_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c0452ae077926284a0c0",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c0452ae077926284a0c0",
+        "uses": 2,
+        "name": "Performance"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": null,
+    "shortUrl": "https://trello.com/c/g2NkbU71",
+    "dateLastActivity": "2025-12-27T01:51:32.106Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c068a10c0b444f528e82",
+        "name": "Analyze job logs",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6918f96a286876b997c8719a",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c07045b541760a361516",
+        "name": "Draft optimization plan",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6918f96a286876b997c8719a",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "6918feb5b6a709e71a8acc70",
+    "name": "Remove Duplicate Records",
+    "desc": "- Multiple user records in CRM | - High impact on reporting accuracy | Steps: | - Identify duplicate keys | - Create deduplication rules | - Apply deduplication",
+    "labels": [
+      {
+        "color": "black_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c0dcf5c39d9f6a829147",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c0dcf5c39d9f6a829147",
+        "uses": 2,
+        "name": "Data Quality"
+      },
+      {
+        "color": "red_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c0e90aa49f5f1a763e46",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c0e90aa49f5f1a763e46",
+        "uses": 3,
+        "name": "ETL"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-11-28T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/kKlDtzIM",
+    "dateLastActivity": "2025-12-28T03:56:50.193Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c108684e75cd7f82ede2",
+        "name": "Confirm rules with CRM",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6918feb5b6a709e71a8acc70",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c112ed7eb567cbcfa2f7",
+        "name": "Validate before/after counts",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6918feb5b6a709e71a8acc70",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "691901cd5a93365277c4453f",
+    "name": "Fix Data Drift Alerting",
+    "desc": "- Drift alerts not triggering | - Recent model errors tied to untracked drift | Steps: | - Investigate alerting pipeline | - Validate metrics | - Test alert scenarios",
+    "labels": [
+      {
+        "color": "yellow",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e29",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e29",
+        "uses": 9,
+        "name": "ML"
+      },
+      {
+        "color": "purple_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c0452ae077926284a0c0",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c0452ae077926284a0c0",
+        "uses": 2,
+        "name": "Performance"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-11-25T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/Ad6DJqwg",
+    "dateLastActivity": "2025-11-24T02:22:12.894Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c15b7cefd16fff69e393",
+        "name": "Fix missing thresholds",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691901cd5a93365277c4453f",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c164f154ac0beffd6831",
+        "name": "Confirm alert routing",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691901cd5a93365277c4453f",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "6919027b948b4215931d1a3b",
+    "name": "Redesign KPI Dashboard",
+    "desc": "- KPI dashboard outdated | - Needs cleaner layout & new metrics | Steps: | - Update dashboard layout | - Add new metric definitions",
+    "labels": [
+      {
+        "color": "lime_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c1850df0f8b08445bc57",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c1850df0f8b08445bc57",
+        "uses": 1,
+        "name": "Visualization"
+      },
+      {
+        "color": "pink_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c18d93426901e865e37c",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c18d93426901e865e37c",
+        "uses": 3,
+        "name": "BI"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": null,
+    "shortUrl": "https://trello.com/c/sNmp26vT",
+    "dateLastActivity": "2025-11-24T02:26:16.619Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c1a4d00537284cdd6c4f",
+        "name": "Review stakeholders",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919027b948b4215931d1a3b",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c1ac95ce44d152915b69",
+        "name": "Publish new version",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919027b948b4215931d1a3b",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "69190469d05df809ad7c1a80",
+    "name": "Migrate Logs to Data Lake",
+    "desc": "- Required for upcoming audits | - Logs must be moved into | lakehouse format | Steps: | - Create ETL ingestion script | - Partition data | - Convert to Parquet",
+    "labels": [
+      {
+        "color": "red_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c0e90aa49f5f1a763e46",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c0e90aa49f5f1a763e46",
+        "uses": 3,
+        "name": "ETL"
+      },
+      {
+        "color": "pink_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923bf896894c585ec212cc6",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923bf896894c585ec212cc6",
+        "uses": 2,
+        "name": "Infrastructure"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-11-29T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/fkaRoi0b",
+    "dateLastActivity": "2025-11-24T02:25:21.309Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c21aef8b072bde8dbbbd",
+        "name": "Validate migrated batches",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69190469d05df809ad7c1a80",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c2224063a0b1f389b777",
+        "name": "Backfill missing months",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69190469d05df809ad7c1a80",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "69192ddbea10a06fd37fb95a",
+    "name": "Develop Data Dictionary",
+    "desc": "- Need standardized table def. | - Too many datasets undocumented | Steps: | - Identify key tables | - Gather definitions | - Create dictionary pages",
+    "labels": [
+      {
+        "color": "pink",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c2d9711cdd96e5412b4a",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c2d9711cdd96e5412b4a",
+        "uses": 1,
+        "name": "Documentation"
+      },
+      {
+        "color": "black",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c2e3edcac50b921fe845",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c2e3edcac50b921fe845",
+        "uses": 1,
+        "name": "Data Governance"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-01T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/KUOb9oAH",
+    "dateLastActivity": "2025-12-27T21:41:52.750Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c2bb8bd76a8fc7e11b40",
+        "name": "Review with data owners",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69192ddbea10a06fd37fb95a",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c2c123227a94febf4e39",
+        "name": "Publish internal link",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69192ddbea10a06fd37fb95a",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Vichu"
+      },
+      {
+        "fullName": "Nandeenee Singh"
+      }
+    ]
+  },
+  {
+    "id": "691905598768567b2eb03e84",
+    "name": "Implement Data Check",
+    "desc": "- Auditors identified gaps | - Need role-based access to | sensitive tables | Steps: | - Map access levels | - Update permission rules | - Set up approval workflow",
+    "labels": [
+      {
+        "color": "sky",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c273b2e4ffc6fafda645",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c273b2e4ffc6fafda645",
+        "uses": 2,
+        "name": "Security"
+      },
+      {
+        "color": "lime",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c279e57e412deca63b18",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c279e57e412deca63b18",
+        "uses": 1,
+        "name": "Compliance"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-03T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/K4NMqXS1",
+    "dateLastActivity": "2025-11-24T02:27:28.211Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c296890d89471b67efeb",
+        "name": "Write documentation",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691905598768567b2eb03e84",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c29d31723704c1da6526",
+        "name": "Perform access audit",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691905598768567b2eb03e84",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "69192e9b3ed96dca5056af7f",
+    "name": "Add Real-Time Metrics",
+    "desc": "- Need live metrics for incidents | - Current dashboards are batch-only | Steps: | - Subscribe to streaming topic | - Build aggregation layer | - Add real-time visuals",
+    "labels": [
+      {
+        "color": "pink_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c18d93426901e865e37c",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c18d93426901e865e37c",
+        "uses": 3,
+        "name": "BI"
+      },
+      {
+        "color": "green_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c3239eb1e815c78e4cb9",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c3239eb1e815c78e4cb9",
+        "uses": 1,
+        "name": "Streaming"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": null,
+    "shortUrl": "https://trello.com/c/CutgUA0U",
+    "dateLastActivity": "2025-11-24T02:30:20.261Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c30f2424d96c3157d9a7",
+        "name": "Validate even throughput",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69192e9b3ed96dca5056af7f",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c3156210066e316240b7",
+        "name": "Test latency",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69192e9b3ed96dca5056af7f",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "69192f30350759a8d471b41b",
+    "name": "Snowflake Cost Optimization",
+    "desc": "- Warehouse costs up 20% | - Need cleanup & clustering | Steps: | - Identify expensive queries | - Optimize comp. clusters | - Drop unused tables",
+    "labels": [
+      {
+        "color": "blue_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c03e4c058d934f29a27b",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c03e4c058d934f29a27b",
+        "uses": 5,
+        "name": "Data Engineering"
+      },
+      {
+        "color": "green_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c377a00514a20bc51f7e",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c377a00514a20bc51f7e",
+        "uses": 1,
+        "name": "Cost Control"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-08T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/T7pyaEoh",
+    "dateLastActivity": "2025-11-24T02:31:35.600Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c3577ebd236ad9d1ce02",
+        "name": "Produce cost report",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69192f30350759a8d471b41b",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c35e10fed1e425c34209",
+        "name": "Apply retention policies",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69192f30350759a8d471b41b",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "6919372655a4bedd6adf569e",
+    "name": "Build Real-Time Alerting for API Failures",
+    "desc": "- Create streaming listener | - Need real-time monitoring | Steps: | - Create streaming listener | - Set failure thresholds | - Route alerts to Slack",
+    "labels": [
+      {
+        "color": "yellow_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c3b6fb6fe09b909e44f2",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c3b6fb6fe09b909e44f2",
+        "uses": 2,
+        "name": "Monitoring"
+      },
+      {
+        "color": "blue_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c03e4c058d934f29a27b",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c03e4c058d934f29a27b",
+        "uses": 5,
+        "name": "Data Engineering"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-09T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/gA1EWgtj",
+    "dateLastActivity": "2025-12-27T21:41:44.969Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c8f1a045bc94c5f3d1cd",
+        "name": "Add log sampling",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919372655a4bedd6adf569e",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c8f8d425e4b91a618be9",
+        "name": "Finalize alert pipeline",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919372655a4bedd6adf569e",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Vichu"
+      },
+      {
+        "fullName": "Nandeenee Singh"
+      }
+    ]
+  },
+  {
+    "id": "691930b5b4dacad3b2285550",
+    "name": "Automate Daily ETL Val.",
+    "desc": "- Manual checks causing delays | - Need automated validation rules | Steps: | - Define validation metrics | - Write check script | - Set automatic triggers",
+    "labels": [
+      {
+        "color": "red_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c0e90aa49f5f1a763e46",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c0e90aa49f5f1a763e46",
+        "uses": 3,
+        "name": "ETL"
+      },
+      {
+        "color": "yellow_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c3b6fb6fe09b909e44f2",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c3b6fb6fe09b909e44f2",
+        "uses": 2,
+        "name": "Monitoring"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-27T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/gZ1GOR9D",
+    "dateLastActivity": "2025-11-24T02:32:42.214Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c39b09a7d9df8275f6f6",
+        "name": "Notify failures",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691930b5b4dacad3b2285550",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c39f04d90a46b175e2ce",
+        "name": "Store logs",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691930b5b4dacad3b2285550",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "69193154a9e0babc23767868",
+    "name": "Build Fraud Detection",
+    "desc": "- Fraud cases rising | - Need anomaly detection cases | Steps: | - Gather historical fraud cases | - Engineer risk features | - Train isolation forest model",
+    "labels": [
+      {
+        "color": "yellow",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e29",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e29",
+        "uses": 9,
+        "name": "ML"
+      },
+      {
+        "color": "sky",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c273b2e4ffc6fafda645",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c273b2e4ffc6fafda645",
+        "uses": 2,
+        "name": "Security"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-20T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/g0C8xw0W",
+    "dateLastActivity": "2025-11-24T02:33:44.166Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c3e3e67dc2e4227eb73f",
+        "name": "Evaluate false positives",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69193154a9e0babc23767868",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c3e9d50c8818d271c72a",
+        "name": "Create demo dashboard",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69193154a9e0babc23767868",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "691931d3a9d8979c58eeb7f9",
+    "name": "Optimize Marketing Spend Model",
+    "desc": "- New budget cycle coming | - Improve ROI predictions | Steps: | - Pull campaign performance | - Train regression models | - Build optimization curve",
+    "labels": [
+      {
+        "color": "orange_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c5480f2113b035a86208",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c5480f2113b035a86208",
+        "uses": 1,
+        "name": "Analytics"
+      },
+      {
+        "color": "orange_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c554dfa62f96f9bce0ea",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c554dfa62f96f9bce0ea",
+        "uses": 1,
+        "name": "Optimization"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-07T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/4GO4Hew9",
+    "dateLastActivity": "2025-11-24T02:39:38.217Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c52c6e9a9937b02f6ae6",
+        "name": "Validate ROI mapping",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691931d3a9d8979c58eeb7f9",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c536a27a14a1fa909dd3",
+        "name": "Deliver recommendations",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691931d3a9d8979c58eeb7f9",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "6919325de8ce40cd14c5eaa4",
+    "name": "Convert Legacy SWL Jobs to dbt",
+    "desc": "- Need dbt models | - SQL scripts unmaintainable | Steps: | - Identify candidates | - Rewrite transformations | - Add tests & documentation",
+    "labels": [
+      {
+        "color": "blue_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c03e4c058d934f29a27b",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c03e4c058d934f29a27b",
+        "uses": 5,
+        "name": "Data Engineering"
+      },
+      {
+        "color": "red_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c5c6b73b2af8e7d7477a",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c5c6b73b2af8e7d7477a",
+        "uses": 1,
+        "name": "Modernization"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-11T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/4yxeIPYz",
+    "dateLastActivity": "2025-11-24T02:41:30.097Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c594f5526b1c5da98404",
+        "name": "Validate model outputs",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919325de8ce40cd14c5eaa4",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c597b2e4ffc6fa01dd8a",
+        "name": "Run dbt docs",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919325de8ce40cd14c5eaa4",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "6919334a10568c1db595a241",
+    "name": "Create Weekly Metrics Email",
+    "desc": "- Execs want weekly auto-sent metrics | Steps: | - Build metric queries | - Format email template | - Schedule automation",
+    "labels": [
+      {
+        "color": "pink_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c18d93426901e865e37c",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c18d93426901e865e37c",
+        "uses": 3,
+        "name": "BI"
+      },
+      {
+        "color": "purple_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c6171ccaaee19fe7e37a",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c6171ccaaee19fe7e37a",
+        "uses": 1,
+        "name": "Automation"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-13T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/BSLMvagg",
+    "dateLastActivity": "2025-11-24T02:43:41.827Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c5fa4c058d934f2ed7f9",
+        "name": "Validate numbers",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919334a10568c1db595a241",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c5ff4169245a65e7950a",
+        "name": "Configure mailing list",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919334a10568c1db595a241",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "6919345d77901ea3d22d58c4",
+    "name": "Onboard New Data Sources",
+    "desc": "- Two new vendors | - Need ingestion pipelines | Steps: | - Build connectors | - Validate schemas | - Load to staging",
+    "labels": [
+      {
+        "color": "yellow",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e29",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e29",
+        "uses": 9,
+        "name": "ML"
+      },
+      {
+        "color": "purple",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e2c",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e2c",
+        "uses": 2,
+        "name": "Personalization"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-04T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/VoI2kCzw",
+    "dateLastActivity": "2025-11-24T02:50:27.535Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c7ced12fec5a17c1f230",
+        "name": "Confirm vendor mappings",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919345d77901ea3d22d58c4",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c7d37b894952b1a51624",
+        "name": "Test full load",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919345d77901ea3d22d58c4",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "691934b745ef8fe9324a8080",
+    "name": "Clean Inconsistent Country Codes",
+    "desc": "- Country codes inconsistent across systems | Steps: | - Identify mismatches | - Create mapping file | - Standardize with script",
+    "labels": [
+      {
+        "color": "black_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c0dcf5c39d9f6a829147",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c0dcf5c39d9f6a829147",
+        "uses": 2,
+        "name": "Data Quality"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-06T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/CAAMxuXi",
+    "dateLastActivity": "2025-11-24T02:51:42.779Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c810919162568cb10ff7",
+        "name": "Validate code distribution",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691934b745ef8fe9324a8080",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c81690b71235c3c61465",
+        "name": "Add data quality rule",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691934b745ef8fe9324a8080",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "6919368f1f402014852c4a34",
+    "name": "Refactor Airflow DAGs",
+    "desc": "- DAGs getting too complex | Steps: | - Review DAG dependencies | - Split into modular tasks | - Update schedules",
+    "labels": [
+      {
+        "color": "blue_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c03e4c058d934f29a27b",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c03e4c058d934f29a27b",
+        "uses": 5,
+        "name": "Data Engineering"
+      },
+      {
+        "color": "blue_light",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923c87a5d58c6e46879de36",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923c87a5d58c6e46879de36",
+        "uses": 1,
+        "name": "Maintenance"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-30T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/3kFdlSSI",
+    "dateLastActivity": "2025-11-24T02:53:02.790Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c8603819531351850878",
+        "name": "Run integration tests",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919368f1f402014852c4a34",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c8650911ee7eaf25d315",
+        "name": "Update Airflow docs",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919368f1f402014852c4a34",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "6919351e1c537e4f518590fd",
+    "name": "Build Product Churn Predictor",
+    "desc": "- Team wants churn prediction | for new product | Steps: | - Aggregate user activity | - Engineering churn features | - Train classification model",
+    "labels": [
+      {
+        "color": "yellow",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e29",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e29",
+        "uses": 9,
+        "name": "ML"
+      },
+      {
+        "color": "yellow_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923bff2a9c9b666d019dbbc",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923bff2a9c9b666d019dbbc",
+        "uses": 2,
+        "name": "Customer Analysis"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e30",
+    "due": "2025-12-19T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/ddfKjO9u",
+    "dateLastActivity": "2025-11-24T02:54:14.844Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923c8acda825baebac1b6aa",
+        "name": "Prepare insight deck",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919351e1c537e4f518590fd",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923c8b368e99fe533b61f24",
+        "name": "Set up prediction pipeline",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919351e1c537e4f518590fd",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "691933b961915b9f49a30711",
+    "name": "Improve Search Query Ranking",
+    "desc": "- Ranking relevance below target | - Need embedding refresh | Steps: | - Train new embeddings | - Fine-tune ranking model | - Evaluate NDCG",
+    "labels": [
+      {
+        "color": "green",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e28",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e28",
+        "uses": 1,
+        "name": "NLP"
+      },
+      {
+        "color": "yellow",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e29",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e29",
+        "uses": 9,
+        "name": "ML"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e2f",
+    "due": "2025-12-17T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/J2nJG0Kz",
+    "dateLastActivity": "2025-11-20T17:13:46.022Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "691f4b8776a308cb67f44ecf",
+        "name": "Deploy updated model",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691933b961915b9f49a30711",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "691f4b9083071c356e02b551",
+        "name": "Monitor performance",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691933b961915b9f49a30711",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      },
+      {
+        "fullName": "Louis Patridge"
+      }
+    ],
+    "assigned": "Louis Patridge"
+  },
+  {
+    "id": "69193030dd4d43f0b8aaf8af",
+    "name": "Build Internal Dataset Search Tool",
+    "desc": "- Users can't find datasets easily | - Need searchable catalog | Steps: | - Index datasets | - Build search API | - Add UI search datasets",
+    "labels": [
+      {
+        "color": "orange",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e2a",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e2a",
+        "uses": 1,
+        "name": "Tools"
+      },
+      {
+        "color": "red",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e2b",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e2b",
+        "uses": 1,
+        "name": "Engineering"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e2f",
+    "due": "2025-12-15T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/hHYWfEno",
+    "dateLastActivity": "2025-11-23T21:29:19.645Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "69237c5317e05a6a528a4dbf",
+        "name": "Test search relevance",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69193030dd4d43f0b8aaf8af",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "69237c9f1ab0e3c851acf852",
+        "name": "Deploy version 1",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69193030dd4d43f0b8aaf8af",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "6919068ccace693a903f6c7d",
+    "name": "Rebuild Recommendation Engine",
+    "desc": "- Need updated embeddings | - Current rec system accuracy dropped 17% | Steps: | - Refresh training dataset | - Train deep learning baseline | - Tune hyperparameters",
+    "labels": [
+      {
+        "color": "yellow",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e29",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e29",
+        "uses": 9,
+        "name": "ML"
+      },
+      {
+        "color": "purple",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e2c",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e2c",
+        "uses": 2,
+        "name": "Personalization"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e2f",
+    "due": "2025-12-18T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/2yebsDTL",
+    "dateLastActivity": "2025-11-24T02:19:04.584Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923bdd9a7ff8b46680989ad",
+        "name": "Run A/B test",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919068ccace693a903f6c7d",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923bde51ab0d43233e3ca7b",
+        "name": "Write evaluation report",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "6919068ccace693a903f6c7d",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "69190320b19dbf813a8bd178",
+    "name": "Create Sales Forecasting Model",
+    "desc": "- 6-month forecasting prediction | - Data includes promotions & seasonality | Steps: | - Aggregate sales data | - Build ARIMA & Prophet models | - Compare accuracy",
+    "labels": [
+      {
+        "color": "yellow",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e29",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e29",
+        "uses": 9,
+        "name": "ML"
+      },
+      {
+        "color": "blue",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e2d",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e2d",
+        "uses": 1,
+        "name": "Forecasting"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e2f",
+    "due": "2025-12-14T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/WyZtMwjC",
+    "dateLastActivity": "2025-11-24T02:18:56.608Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923becb710667297b2461c2",
+        "name": "Document model assumptions",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69190320b19dbf813a8bd178",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923bed2f55d29931672d4d5",
+        "name": "Send weekly forecast",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "69190320b19dbf813a8bd178",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  },
+  {
+    "id": "691900c5e7dddc5d408ad0cc",
+    "name": "Implement Feature Store v2",
+    "desc": "- Current feature store slow | - Need versioning & feature lineage | Steps: | - Review existing architecture | - Define new schema | - Build APIs",
+    "labels": [
+      {
+        "color": "yellow",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6918f853b1842c1047085e29",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6918f853b1842c1047085e29",
+        "uses": 9,
+        "name": "ML"
+      },
+      {
+        "color": "pink_dark",
+        "nodeId": "ari:cloud:trello::label/workspace/6918f7d9880145348b9ed684/6923bf896894c585ec212cc6",
+        "idBoard": "6918f853b1842c1047085df4",
+        "id": "6923bf896894c585ec212cc6",
+        "uses": 2,
+        "name": "Infrastructure"
+      }
+    ],
+    "idList": "6918f853b1842c1047085e2f",
+    "due": "2025-12-10T17:00:00.000Z",
+    "shortUrl": "https://trello.com/c/MpdsuS6V",
+    "dateLastActivity": "2025-11-24T02:18:48.099Z",
+    "attachments": [],
+    "checklists": [
+      {
+        "id": "6923bfaf9103905b46c60d6f",
+        "name": "Write migration script",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691900c5e7dddc5d408ad0cc",
+        "pos": 140737488355328,
+        "checkItems": []
+      },
+      {
+        "id": "6923bfbfec7a30a42c59278a",
+        "name": "Run load tests",
+        "idBoard": "6918f853b1842c1047085df4",
+        "idCard": "691900c5e7dddc5d408ad0cc",
+        "pos": 140737488371712,
+        "checkItems": []
+      }
+    ],
+    "members": [
+      {
+        "fullName": "Nandeenee Singh"
+      },
+      {
+        "fullName": "Vichu"
+      }
+    ]
+  }
+]
