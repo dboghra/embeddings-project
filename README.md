@@ -18,6 +18,16 @@ This is the same fundamental pipeline behind tools like ChatGPT's file uploads, 
 
 ---
 
+## Resources/to-do:
+https://realpython.com/chromadb-vector-database/
+https://realpython.com/tutorials/ai/
+
+https://www.datacamp.com/
+https://huggingface.co/models?library=sentence-transformers&author=sentence-transformers
+https://www.sbert.net/docs/sentence_transformer/pretrained_models.html
+
+---
+
 ## 🧱 System Architecture
 
 ```
