@@ -1,47 +1,121 @@
-# Generate Data Spring26 Member Challenge
+# 🔍 PDF RAG — Retrieval-Augmented Generation from Scratch
 
-Congratulations! If you are receiving this challenge, you have passed the initial screening for being a member of the Data Branch, and you are onto Round 2! Below is a Technical Challenge that you must complete to the best of your ability. Be as creative as you can and really think outside the box. Challenge yourself, even if you’re not sure about something!
+A self-directed deep dive into **RAG (Retrieval-Augmented Generation)** — built to understand how modern AI pipelines work under the hood, from raw text ingestion all the way to semantic search.
 
-## Overview: 
-This task is meant to test your ability to function in a real-world data scenario. It will teach you how to:
-- **Deal with messy data.** This data is intentionally inconsistent to simulate real ticket systems. This “messiness” may be in terms of formatting, labels, or anything else. 
-- **Understand and apply embeddings.** You must convert natural language (i.e. English) into numerical vectors using an embedding model of your choice.
-- **Identify duplicates to remove.** Real-life workflows often require removal of duplicates based on logs, tasks, etc. This is meant to mimic this scenario. 
-- **Justify analytical decisions.** In addition to computing the similarity, you must also
-  - Explain why 2 tasks are related
-  - Form meaningful clusters
-  - Interpret any outliers
-- **[OPTIONAL] Create a frontend to display duplicate tasks.** For those who want to go above and beyond.
+> **Status:** 🚧 In Development — architecture planned, implementation in progress
 
-**REMEMBER**: You are NOT building a model. You are utilizing existing tools to analyze data.
+---
 
-If there is anything else you have questions about, do not hesitate to reach out to us!
-- Vichu Selvaraju selvaraju.v@northeastern.edu
-- Nandeenee Singh singh.nand@northeastern.edu
+## 💡 What This Project Does
 
-## Challenge Instructions:
-- **Retrieve the task cards using the Trello API.** The dataset is not provided to you directly. You must pull, parse, and analyze cards from a live Trello board.
-  - First add the board to your workspace: https://trello.com/invite/b/6918f853b1842c1047085df4/ATTI4a257d1937641cd9a1478ac634c54def4DE3D00C/aguenta-tasks
-  - API KEY: e5244381f2503a3dddbb64ac6f57d947
-  - Retrieve your token using this route (make sure to edit the name field with camel case): https://trello.com/1/authorize?expiration=never&scope=read&response_type=token&name=[YOUR-NAME]&key=e5244381f2503a3dddbb64ac6f57d947
-  - Make sure to store your key and token securely
-  - **You should only be pulling data from the trello board we provided for you**
-- **Export the raw API response.** You can use a file of your choice (JSON, CSV, txt, Excel)
-  - Remember, the format you choose will impact the parsing of the fields later on. 
-- **Parse the card fields.** Each Trello card has metadata that you must extract to determine important information about each task.
-  - You must clean the text and prepare it for embedding. It should be easily readable.
-- **Generate Text Embeddings.** Use an embedding model to convert each card into a numerical vector. We would suggest using the Sentence Transform python library, but you are not required to do so!
-- **Compute Similarity.** For each card, compute similarity with every other card. Remember, your goal is to identify: 
-  - Duplicate tasks
-  - Near-duplicate tasks
-  - Logically similar clusters
-- **[OPTIONAL] Create a frontend to display duplicate tasks.** There are no explicit instructions for this step, just do what you think will convey this data adequately. 
+Upload any PDF and ask it questions in plain English. Rather than keyword matching, the system understands *meaning* — surfacing the most relevant passages using vector similarity search.
 
-## Submission Instructions
+```
+PDF → Parse → Chunk → Embed → Store in Vector DB → Query → Answer
+```
 
-1. Create a new branch for your work: `git checkout -b [branch-name]`
-2. Complete the challenge in your branch
-3. Commit and push your work regularly
-4. When ready, create a Pull Request from `[branch-name]` to `main`
-5. **DO NOT MERGE** - Leave the PR open for review
-6. Add any additional documentation or explanation in the PR description
+This is the same fundamental pipeline behind tools like ChatGPT's file uploads, Notion AI, and enterprise document search systems.
+
+---
+
+## 🧱 System Architecture
+
+```
+┌─────────────┐     ┌──────────────┐     ┌─────────────────────┐
+│  PDF Input  │────▶│  Text Parser │────▶│   Chunking Engine   │
+└─────────────┘     └──────────────┘     └──────────┬──────────┘
+                                                     │
+                                          ┌──────────▼──────────┐
+                                          │  Embedding Model    │
+                                          │  (Sentence-BERT)    │
+                                          └──────────┬──────────┘
+                                                     │
+                                          ┌──────────▼──────────┐
+                                          │  Vector Store       │
+                                          │  (ChromaDB)         │
+                                          └──────────┬──────────┘
+                                                     │
+                              ┌──────────────────────▼────────────────────────┐
+                              │  Query Interface — Semantic Similarity Search  │
+                              └───────────────────────────────────────────────┘
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Component | Tool | Why |
+|---|---|---|
+| PDF Parsing | `PyMuPDF` / `pdfplumber` | Robust text + layout extraction |
+| Embeddings | `sentence-transformers` | Pretrained SBERT models, no fine-tuning needed |
+| Vector Database | `ChromaDB` | Lightweight, local-first vector store |
+| Language | Python 3.10+ | Industry standard for ML pipelines |
+
+---
+
+## 📐 Key Concepts Explored
+
+- **Text Embeddings** — converting unstructured text into dense numerical vectors that encode semantic meaning
+- **Chunking Strategy** — splitting documents into overlapping segments to preserve context across chunk boundaries
+- **Cosine Similarity** — measuring vector proximity to rank retrieved passages by relevance
+- **RAG Pipeline Design** — decoupling retrieval from generation; understanding where each component lives in the stack
+- **Vector Databases** — indexing, storing, and querying high-dimensional embeddings efficiently
+
+---
+
+## 🗂️ Project Structure
+
+```
+pdf-rag/
+├── data/               # Sample PDFs for testing
+├── src/
+│   ├── ingest.py       # PDF loading and text extraction
+│   ├── chunker.py      # Text splitting logic
+│   ├── embed.py        # Embedding generation via sentence-transformers
+│   ├── store.py        # ChromaDB read/write interface
+│   └── query.py        # Similarity search and result ranking
+├── notebooks/          # Exploratory work and model comparisons
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/your-username/pdf-rag.git
+cd pdf-rag
+pip install -r requirements.txt
+
+# Ingest a PDF
+python src/ingest.py --file data/sample.pdf
+
+# Query it
+python src/query.py --question "What are the main findings?"
+```
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] PDF ingestion and text extraction
+- [ ] Chunking with overlap
+- [ ] Embedding pipeline with `sentence-transformers`
+- [ ] ChromaDB integration
+- [ ] Semantic query interface
+- [ ] Notebook with embedding visualizations (UMAP/t-SNE)
+- [ ] Swap and benchmark multiple SBERT models
+- [ ] Optional: lightweight frontend (Streamlit or React)
+
+---
+
+## 🎯 Why I Built This
+
+RAG is one of the most widely deployed patterns in production AI systems today. Rather than treating it as a black box, I wanted to build each layer myself — from how embeddings encode meaning, to how vector databases enable fast approximate nearest-neighbor search — so I genuinely understand what's happening when I use or build AI-powered tools.
+
+---
+
+## 📬 Contact
+
+**[Your Name]** — [your-email@northeastern.edu] — [LinkedIn](https://linkedin.com/in/yourprofile) — [GitHub](https://github.com/your-username)
