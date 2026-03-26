@@ -63,7 +63,7 @@ This is the same fundamental pipeline behind tools like ChatGPT's file uploads, 
 
 ---
 
-## 🗂️ Project Structure
+## 🗂️ Project Structure Goal
 
 ```
 pdf-rag/
@@ -79,23 +79,6 @@ pdf-rag/
 └── README.md
 ```
 
----
-
-## 🚀 Getting Started
-
-```bash
-git clone https://github.com/your-username/pdf-rag.git
-cd pdf-rag
-pip install -r requirements.txt
-
-# Ingest a PDF
-python src/ingest.py --file data/sample.pdf
-
-# Query it
-python src/query.py --question "What are the main findings?"
-```
-
----
 
 ## 🗺️ Roadmap
 
@@ -112,7 +95,7 @@ python src/query.py --question "What are the main findings?"
 
 ## 🎯 Why I Built This
 
-RAG is one of the most widely deployed patterns in production AI systems today. Rather than treating it as a black box, I wanted to build each layer myself — from how embeddings encode meaning, to how vector databases enable fast approximate nearest-neighbor search — so I genuinely understand what's happening when I use or build AI-powered tools.
+RAG is one of the most widely deployed patterns in production AI systems today. Rather than treating it as a black box, I wanted to learn it myself. From how embeddings encode meaning, to how vector databases work.
 
 ---
 
