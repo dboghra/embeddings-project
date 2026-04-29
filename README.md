@@ -109,6 +109,3 @@ RAG is one of the most widely deployed patterns in production AI systems today. 
 
 ---
 
-## 📬 Contact
-
-**[Your Name]** — [your-email@northeastern.edu] — [LinkedIn](https://linkedin.com/in/yourprofile) — [GitHub](https://github.com/your-username)
