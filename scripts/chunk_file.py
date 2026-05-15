@@ -10,6 +10,7 @@ Usage:
   python scripts/chunk_file.py --pdf data/myfile.pdf --chunk-size 800 --overlap 100
 """
 import argparse
+from clean_data import clean_pages
 import json
 from pathlib import Path
 from typing import List, Tuple
