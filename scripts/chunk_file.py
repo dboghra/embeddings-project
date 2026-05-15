@@ -12,50 +12,16 @@ Usage:
 import argparse
 import json
 from pathlib import Path
-from typing import List, Tuple, Optional
+from typing import List, Tuple
+from ingest import load_pdf
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
-try:
-    from pypdf import PdfReader
-except Exception:
-    PdfReader = None
 
-#why are we returning a tuple? tuple is ordered, unchangeable and duplicats OK
-def load_pdf(path: Path) -> Tuple[List[str], List[str]]:
-    """Extract text from each page of a PDF.
-    
-    Args:
-        path: Path to the PDF file
-        
-    Returns:
-        Tuple of (page_ids, page_texts) where:
-        - page_ids: list of strings like "filename-page-1", "filename-page-2", etc.
-        - page_texts: list of extracted text from each page
-        
-    Raises:
-        RuntimeError: if pypdf is not installed
-        SystemExit: if PDF file not found
-    """
-    if PdfReader is None: #what does pfdfreader do? 
-        raise RuntimeError("pypdf is required to read PDFs (pip install pypdf)")
-    if not path.exists():
-        raise SystemExit(f"PDF file not found: {path}")
-    
-    reader = PdfReader(str(path)) 
-    ids: List[str] = []
-    texts: List[str] = [] #why does ids and texts need to be immutable?
-    
-    for i, page in enumerate(reader.pages):
-        text = page.extract_text() or ""
-        ids.append(f"{path.name}-page-{i+1}")
-        texts.append(text.strip())
-    
-    return ids, texts
 
-#why overlapping chunkcs by character count?
+
 def chunk_text(text: str, chunk_size: int = 1000, overlap: int = 200) -> List[str]:
     """Chunk a single string into overlapping chunks by character count.
     
@@ -76,7 +42,8 @@ def chunk_text(text: str, chunk_size: int = 1000, overlap: int = 200) -> List[st
     if overlap >= chunk_size:
         raise ValueError("overlap must be smaller than chunk_size")
     
-    # why a list was chosen here? ordered and changeable duplicates ok
+    
+    chunks: List[str] = []
     start = 0
     L = len(text)
     
@@ -92,9 +59,7 @@ def chunk_text(text: str, chunk_size: int = 1000, overlap: int = 200) -> List[st
         
         # Move start position: either by (chunk_size - overlap) or to chunk_size
         # this ensures we don't get stuck if overlap is 0
-        # what does move start position mean?  It means advancing the starting index for the next chunk
-        #why are we advancing the starting index for the next chunk?
-        start = max(end - overlap, end) if overlap > 0 else end
+        start = end - overlap if overlap > 0 else end
     
     return chunks
 
