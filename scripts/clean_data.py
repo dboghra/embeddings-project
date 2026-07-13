@@ -64,7 +64,7 @@ def is_empty_page(text: str, min_chars: int = 50) -> bool:
     return len(text.strip()) < min_chars
 
 #if there is a header/footer 
-def detect_repeated_lines(pages: List[str], threshold: float = 0.6) -> set:
+def detect_repeated_lines(pages: List[str], threshold: float = 0.6, min_pages: int = 3) -> set:
     """Find lines that appear on more than `threshold` fraction of pages.
 
     These are likely headers, footers, or page numbers that add noise
@@ -73,11 +73,15 @@ def detect_repeated_lines(pages: List[str], threshold: float = 0.6) -> set:
     Args:
         pages: list of page text strings
         threshold: fraction of pages a line must appear on to be flagged
+        min_pages: skip detection below this many pages
 
     Returns:
         Set of line strings to remove
     """
-    if not pages:
+    # "Repeated across pages" is meaningless with only a page or two — every
+    # line trivially appears on 100% of them and would be stripped. Skip until
+    # we have enough pages for the fraction to mean something.
+    if len(pages) < min_pages:
         return set()
 
     from collections import Counter
